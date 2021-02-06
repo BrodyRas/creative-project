@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+}
+
+:root {
+    --main-accent2: #e9f4ff;
+    --main-accent: #cad6df;
+    --main-color: #334A5C;
+    --main-shade: #12202b;
+    --main-shade2: #07131d;
+
+    --compliment-accent2: #fffaf4;
+    --compliment-accent: #f5d9af;
+    --compliment-color: #DBB57B;
+    --compliment-shade: #8F6A33;
+    --compliment-shade2: #684a1d;
+
+    --dark-font: #4F565C;
+    --light-font: #666f77;
+}
+
+body {
+    background-color: var(--compliment-accent2);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--dark-font);
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.7em;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p,
+li,
+a {
+    color: var(--light-font);
+    font-family: 'Roboto Slab', serif;
+}
+
+.img {
+    width: 100%;
+}
+
+.navbar-brand img {
+    width: 200px;
+    /* Turn a black image into our accent color! */
+    filter: brightness(0.9) invert(.6) sepia(.5) hue-rotate(350deg) saturate(200%);
+}
+
+.nav-link {
+    display: inline;
+    margin: 0 10px;
+    transition: font-size .5s, color .5s;
+    color: var(--compliment-color) !important;
+}
+
+.active a {
+    color: var(--compliment-accent) !important;
+}
+
+.nav-link:hover {
+    color: var(--compliment-accent2) !important;
+    font-size: 1.05em;
+}
+
+.page {
+    margin: 10px 10px;
+}
+
+.weekly-header {
+    display: flex;
+    justify-content: flex-end;
+    height: 500px;
+}
+
+.weekly-header-text {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-accent);
+    border: 5px solid var(--main-color);
+    border-radius: 50px;
+    justify-content: center;
+    padding: 30px;
+    flex: 2;
+}
+
+.weekly-header-text h1 {
+    margin: 10px 0;
+    font-size: 3em;
+}
+
+.weekly-header-text a {
+    display: inline;
+    text-align: right;
+}
+
+.weekly-header-image {
+    flex: 3;
+    background-image: url(images/jennifer.jpg);
+    background-position: 50% 20%;
+    background-size: cover;
+    border-radius: 50px;
+    border: 5px solid var(--main-color);
+
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.teaser-container {
+    border: 5px solid var(--compliment-color);
+    border-radius: 50px;
+    transition: border-radius 1s;
+
+    position: relative;
+    height: 100px;
+}
+
+.teaser-image {
+    background-color: var(--main-accent);
+    height: 100%;
+
+    filter: blur(5px) grayscale(100%);
+
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 50px;
+    transition: filter 1s, border-radius 1s;
+}
+
+.teaser-container:hover {
+    border-radius: 10px;
+}
+
+.teaser-container:hover .teaser-image {
+    filter: blur(0px) grayscale(0%);
+    -webkit-filter: blur(0px);
+    border-radius: 10px;
+}
+
+.bell-ringer {
+    background-image: url(images/whiteboard.jpg);
+}
+
+.quiz {
+    background-image: url(images/quiz.jpg);
+}
+
+.teaching-technique {
+    background-image: url(images/learning-style.jpg);
+}
+
+.teaser {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+.teaser h3,
+p {
+    display: inline;
+    background-color: var(--main-accent2);
+    padding: 0px 10px;
+    margin: 0px 0px;
+}
+
+.weekly-header-text p {
+    background-color: transparent;
+}
+
+
+.article {
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 25px;
+    border: 5px solid var(--main-shade);
+    margin-bottom: 10px;
+}
+
+.article img {
+    height: 500px;
+    object-position: center;
+    border-radius: 25px;
+    border: 5px solid var(--compliment-color);
+}
+
+.article-text {
+    background-color: var(--main-accent2);
+    padding: 10px;
+    border-radius: 25px;
+    border: 5px solid var(--compliment-color);
+    margin-top: 10px;
+}
+
+
+.footer {
+    display: flex;
+    text-align: center;
+    background-color: var(--main-color);
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.footer img {
+    width: 40px;
+    /* Turn a black image into our accent color! */
+    filter: brightness(0.9) invert(.6) sepia(.5) hue-rotate(350deg) saturate(200%);
+}
+
+.footer a{
+    color: var(--compliment-accent);
+    transition: color .5s, font-size .5s;
+    text-decoration: none;
+}
+
+.footer:hover {
+    color: var(--compliment-accent2);
+    font-size: 1.1em;
+}
+
+@media screen and (min-width: 1600px) {
+    .weekly-header {
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .weekly-header {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .weekly-header {
+        flex-direction: column-reverse;
+        height: 1000px;
+    }
+
+    .weekly-header-text {
+        flex: 1;
+        width: auto;
+    }
+
+    .weekly-header-image {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .teaser-container {
+        height: 150px;
+    }
+}

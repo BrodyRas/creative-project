@@ -82,6 +82,8 @@ a {
     margin: 10px 10px;
 }
 
+/* HEADER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 .weekly-header {
     display: flex;
     justify-content: flex-end;
@@ -124,6 +126,9 @@ img {
     width: 100%;
 }
 
+
+/* TEASER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 .teaser-list {
     padding: 5px 14px;
     background-color: var(--main-color);
@@ -132,34 +137,40 @@ img {
 
 .teaser-container {
     border: 5px solid var(--compliment-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50px;
     transition: border-radius 1s;
     margin: 10px 0px;
-    position: relative;
-    height: 100px;
+    height: auto;
+    background-image: url(images/attention.png);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: grayscale(100%);
+    transition: border-radius 1s;
 }
 
-.teaser-image {
-    background-color: var(--main-accent);
-    height: 100%;
-
-    filter: blur(5px) grayscale(100%);
-
-    background-size: cover;
-    background-position: 50% 50%;
+.blur-filter {
+    position: absolute;
+    height: calc(100% + 5px);
+    width: calc(100% + 5px);
+    /* border: 1px solid #F00; */
     border-radius: 50px;
-    transition: filter 1s, border-radius 1s;
+    backdrop-filter: blur(5px) grayscale(100%);
+    transition: border-radius 1s, backdrop-filter 1s;
 }
 
 .teaser-container:hover {
     border-radius: 10px;
 }
 
-.teaser-container:hover .teaser-image {
-    filter: blur(0px) grayscale(0%);
-    -webkit-filter: blur(0px);
-    border-radius: 5px;
+.teaser-container:hover .blur-filter{
+    border-radius: 10px;
+    backdrop-filter: blur(0px) grayscale(0%);
 }
+
+
 
 .bell-ringer {
     background-image: url(images/whiteboard.jpg);
@@ -185,25 +196,21 @@ img {
     background-image: url(images/online.jpg);
 }
 
-.teaser {
-    position: absolute;
-    top: 30%;
-    left: 5%;
+.teaser-text {
+    position: relative;
+    background-color: var(--main-accent2);
+    border-radius: 5px;
+    margin: 25px;
 }
 
-.teaser h3,
+.teaser-text h3,
 p {
-    display: inline;
-    background-color: var(--main-accent2);
+    text-align: center;
     padding: 0px 10px;
     margin: 0px 0px;
 }
 
-.weekly-header-text p {
-    background-color: transparent;
-}
-
-
+/* ARTICLE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .article {
     background-color: var(--main-color);
     padding: 10px;
@@ -283,8 +290,4 @@ p {
     }
 }
 
-@media screen and (max-width: 500px) {
-    .teaser-container {
-        height: 150px;
-    }
-}
+@media screen and (max-width: 500px) {}

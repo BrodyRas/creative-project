@@ -5,8 +5,8 @@
 :root {
     --main-accent2: #e9f4ff;
     --main-accent: #cad6df;
-    --main-color: #334A5C;
-    --main-shade: #12202b;
+    --main-color: #325875;
+    --main-shade: #334A5C;
     --main-shade2: #07131d;
 
     --compliment-accent2: #fffaf4;
@@ -124,11 +124,17 @@ img {
     width: 100%;
 }
 
+.teaser-list {
+    padding: 5px 14px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+}
+
 .teaser-container {
     border: 5px solid var(--compliment-color);
     border-radius: 50px;
     transition: border-radius 1s;
-
+    margin: 10px 0px;
     position: relative;
     height: 100px;
 }
@@ -152,19 +158,31 @@ img {
 .teaser-container:hover .teaser-image {
     filter: blur(0px) grayscale(0%);
     -webkit-filter: blur(0px);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .bell-ringer {
     background-image: url(images/whiteboard.jpg);
 }
 
+.attention {
+    background-image: url(images/attention.png);
+}
+
 .quiz {
     background-image: url(images/quiz.jpg);
 }
 
+.test {
+    background-image: url(images/test.jpg);
+}
+
 .teaching-technique {
     background-image: url(images/learning-style.jpg);
+}
+
+.online {
+    background-image: url(images/online.jpg);
 }
 
 .teaser {
@@ -225,7 +243,7 @@ p {
     filter: brightness(0.9) invert(.6) sepia(.5) hue-rotate(350deg) saturate(200%);
 }
 
-.footer a{
+.footer a {
     color: var(--compliment-accent);
     transition: color .5s, font-size .5s;
     text-decoration: none;

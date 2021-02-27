@@ -17,6 +17,9 @@
 
     --dark-font: #4F565C;
     --light-font: #666f77;
+
+    --red-shade: #550000;
+    --red-accent: #CC5353;
 }
 
 body {
@@ -65,7 +68,7 @@ a {
 .nav-link {
     display: inline;
     margin: 0 10px;
-    transition: font-size .5s, color .5s;
+    transition: font-size .3s, color .3s;
     color: var(--compliment-color) !important;
 }
 
@@ -83,6 +86,31 @@ a {
 }
 
 /* HEADER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.europeana_banner {
+    display: flex;
+    align-items: center;
+    border: 5px solid var(--red-shade);
+    border-radius: 90px;
+    width: 95%;
+    margin: 10px auto;
+    background-color: var(--red-accent);
+    transition: width .3s, border-radius .3s;
+}
+
+.europeana_banner:hover {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.europeana_banner_text {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: var(--compliment-accent);
+    border: 5px solid var(--red-shade);
+    border-radius: 30px;
+}
 
 .weekly-header {
     display: flex;
@@ -141,14 +169,13 @@ img {
     justify-content: center;
     align-items: center;
     border-radius: 50px;
-    transition: border-radius 1s;
     margin: 10px 0px;
     height: auto;
     background-image: url(images/attention.png);
     background-size: cover;
     background-position: center;
     backdrop-filter: grayscale(100%);
-    transition: border-radius 1s;
+    transition: border-radius .3s;
 }
 
 .blur-filter {
@@ -157,7 +184,7 @@ img {
     width: calc(100% + 5px);
     border-radius: 50px;
     backdrop-filter: blur(5px) grayscale(100%);
-    transition: border-radius 1s, backdrop-filter 1s;
+    transition: border-radius .3s, backdrop-filter .3s;
 }
 
 .teaser-container:hover {
@@ -251,12 +278,12 @@ p a {
 }
 
 .e_search_item {
-    margin: 10px auto;
-    border: 5px solid var(--main-color);
-    background-color: var(--main-accent2);
+    margin: 5px auto;
+    border: 5px solid var(--main-shade);
+    background-color: var(--main-color);
     border-radius: 25px;
     width: 400px;
-    height: 600px;
+    /* height: 600px; */
     transition: width .3s, background-color .3s;
     display: flex;
     flex-direction: column;
@@ -265,7 +292,7 @@ p a {
 
 .e_search_item:hover {
     width: 410px;
-    background-color: white;
+    background-color: var(--main-accent);
     text-decoration: none;
 }
 
@@ -275,6 +302,19 @@ p a {
     margin: 10px 0;
     border-radius: 10px;
     border: 5px solid var(--compliment-color);
+}
+
+.e_search_item_text {
+    border: 5px solid var(--compliment-color);
+    border-radius: 10px;
+    background-color: var(--main-accent);
+    margin: 10px 10px;
+    padding: 10px;
+    transition: background-color .3s;
+}
+
+.e_search_item:hover .e_search_item_text{
+    background-color: white;
 }
 
 .e_search_item h3 {
@@ -306,7 +346,7 @@ p a {
 
 .footer a {
     color: var(--compliment-accent);
-    transition: color .5s, font-size .5s;
+    transition: color .3s, font-size .3s;
     text-decoration: none;
 }
 

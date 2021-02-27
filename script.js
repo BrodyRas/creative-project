@@ -38,9 +38,10 @@ submit.addEventListener("click", function (event) {
                 results += "<h2>No results! Try a different search</h2>";
             } else {
                 for (let i of json.items) {
-                    console.log(i);
+                    // console.log(i);
                     results += `<a class='e_search_item' href='${i.guid}'>`;
                     results += `<img src="${i.edmPreview}">`;
+                    results += "<div class='e_search_item_text'>";
                     let titleCutoff = 100;
                     let ell = i.title.toString().length > titleCutoff ? "..." : "";
                     results += `<h3>${i.title.toString().substr(0, titleCutoff)}${ell}</h3>`;
@@ -52,6 +53,7 @@ submit.addEventListener("click", function (event) {
                         let ell2 = i.dcDescription[0].toString().length > descCutoff ? "..." : "";
                         results += `<p class="e_dcDescription">${i.dcDescription[0].toString().substr(0,descCutoff)}${ell2}</p>`;
                     }
+                    results += "</div>";
                     results += "</a>";
                 }
             }

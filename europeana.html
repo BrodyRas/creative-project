@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Europeana</title>
+</head>
+
+<body>
+    <!-- BOOTSTRAP MENU -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--main-color);">
+
+        <a class="navbar-brand" href="index.html"><img src="images/teacherLogo.png" alt="Ibarra" width="100px"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bell-ringers.html">Bell Ringers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quizzes.html">Quizzes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="teaching-techniques.html">Teaching Techniques</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- /BOOTSTRAP MENU -->
+
+    <h1>Europeana Portal</h1>
+    <p>This is an awesome library resource provided by the wise folks at Europeana. The API allows us to search for
+        historical records not only by terms, but by color as well! If you wish to have your search curated by color,
+        check the box below, and use one of the <a href="https://www.w3.org/TR/css-color-3/#svg-color">listed
+            colors</a> provided in the dropdown menu! You can even search by color alone, no term needed: try it
+        yourself!</p>
+    <div class="europeana_form">
+        <form action="">
+            <label>Enter your search term here:</label><br>
+            <input id="europeana_input" type="text" placeholder="Search Term"></input><br>
+            <select id="europeana_color">
+                <option value="FF0000">Red</option>
+                <option value="DC143C">Crimson</option>
+                <option value="00FF00">Green</option>
+                <option value="90EE90">Light Green</option>
+                <option value="006400">Dark Green</option>
+                <option value="228B22">Forest Green</option>
+                <option value="0000FF">Blue</option>
+                <option value="00008B">Dark Blue</option>
+                <option value="00BFFF">Deep Sky Blue</option>
+                <option value="ADD8E6">Light Blue</option>
+                <option value="7FFFD4">Aquamarine</option>
+                <option value="00FFFF">Cyan</option>
+                <option value="A52A2A">Brown</option>
+                <option value="FFFF00">Yellow</option>
+                <option value="9ACD32">Yellow Green</option>
+                <option value="7FFF00">Chartreuse</option>
+                <option value="D2B48C">Tan</option>
+            </select>
+            <input id="europeana_check" type="checkbox">Colorized?</input><br>
+            <input id="europeana_submit" type="submit" value="Let's Go!"></input>
+        </form>
+    </div>
+
+    <div id="europeana_results"></div>
+
+
+    <div class="footer">
+        <a href="https://github.com/BrodyRas/creative-project">
+            <img src="images/git-icon.png" alt="GitHub" , width="30px">
+            View repository
+        </a>
+    </div>
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <!-- /BOOTSTRAP SCRIPT -->
+
+    <script text="type/javascript" src="/script.js"></script>
+
+</body>
+
+</html>

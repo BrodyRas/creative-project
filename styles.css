@@ -155,7 +155,6 @@ img {
     position: absolute;
     height: calc(100% + 5px);
     width: calc(100% + 5px);
-    /* border: 1px solid #F00; */
     border-radius: 50px;
     backdrop-filter: blur(5px) grayscale(100%);
     transition: border-radius 1s, backdrop-filter 1s;
@@ -165,7 +164,7 @@ img {
     border-radius: 10px;
 }
 
-.teaser-container:hover .blur-filter{
+.teaser-container:hover .blur-filter {
     border-radius: 10px;
     backdrop-filter: blur(0px) grayscale(0%);
 }
@@ -234,6 +233,60 @@ p {
     margin-top: 10px;
 }
 
+/* EUROPEANA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.europeana_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p a {
+    text-decoration: underline;
+}
+
+#europeana_results {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.e_search_item {
+    margin: 10px auto;
+    border: 5px solid var(--main-color);
+    background-color: var(--main-accent2);
+    border-radius: 25px;
+    width: 400px;
+    height: 600px;
+    transition: width .3s, background-color .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.e_search_item:hover {
+    width: 410px;
+    background-color: white;
+    text-decoration: none;
+}
+
+.e_search_item img {
+    height: 300px;
+    width: 93%;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.e_search_item h3 {
+    text-align: center;
+}
+
+.e_country {
+    text-align: center;
+}
+
+.e_search_item p {
+    text-align: left;
+}
 
 .footer {
     display: flex;
